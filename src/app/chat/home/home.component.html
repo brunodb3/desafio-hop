@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="logout()" matTooltip="Encerrar sessão">
+        <mat-icon class="icon">power_settings_new</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+<mat-card class="messages-card">
+  <mat-card-header>
+    <mat-card-title>Chatbot React</mat-card-title>
+    <mat-card-subtitle>Converse com nosso chatbot</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="message-block" *ngFor="let message of messages">
+      <h3>
+        <mat-icon class="vertical-align icon" *ngIf="message.author == 'Chatbot'">computer</mat-icon>
+        <mat-icon class="vertical-align icon" *ngIf="message.author != 'Chatbot'">account_circle</mat-icon>
+        {{ message.output.text }}
+      </h3>
+
+      <p>{{ message.author }} | {{ message.sentDate | date:'MMM d, y, h:mm:ss a' }}</p>
+
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <form id="message-form" [formGroup]="messageForm">
+        <mat-form-field class="full-width">
+          <input matInput #message minLength="1" maxlength="256" placeholder="Mensagem" formControlName="message">
+          <mat-hint align="start">
+            <strong>Digite aqui sua mensagem</strong>
+          </mat-hint>
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+
+        <button class="full-width form-button" mat-flat-button color="primary" (click)="submitMessage(message.value)" [disabled]="!messageForm.valid">Enviar</button>
+      </form>
+  </mat-card-actions>
+</mat-card>

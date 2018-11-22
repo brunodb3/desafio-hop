@@ -1,0 +1,30 @@
+// home.component.scss
+//  - home component sass declarations
+// -------------------------------------------------------------------------------------------------
+
+// importing custom variables
+@import '../../../styles-variables';
+
+#message-form {
+  margin: 3% 5% 0 5%;
+}
+
+.messages-card {
+  margin: 0 5% 0 5%;
+}
+
+.message-block {
+  margin: 5% 5% 0 5%;
+}
+
+.vertical-align {
+  vertical-align: middle;
+}
+
+.icon {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

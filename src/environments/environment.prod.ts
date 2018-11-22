@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  hopApi: 'https://react-challenge-backend.mybluemix.net'
 };

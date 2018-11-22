@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+// styles.scss
+//  - global sass declarations
+// -------------------------------------------------------------------------------------------------
+
+// importing custom variables
+@import 'styles-variables';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+  margin: 5px;
+  font-size: 36pt;
+  font-weight: 400;
+}
+
+h2 {
+  margin: 5px;
+  font-size: 18pt;
+  font-weight: 200;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.vertical-align {
+  vertical-align: middle;
+}
+
+.form-button {
+  margin-top: 2% !important;
+}

@@ -1,0 +1,14 @@
+// login.component.scss
+//  - login component sass declarations
+// -------------------------------------------------------------------------------------------------
+
+// importing custom variables
+@import '../../../styles-variables';
+
+#login-form {
+  margin: 3% 5% 0 5%;
+}
+
+.login-card {
+  margin: 0 5% 0 5%;
+}

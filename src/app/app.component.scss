@@ -1,0 +1,18 @@
+// app.component.scss
+//  - app component sass declarations
+// -------------------------------------------------------------------------------------------------
+
+// importing custom variables
+@import '../styles-variables';
+
+#banner {
+  padding: 24px;
+  min-height: 100px;
+  text-align: center;
+  background-color: $primary;
+
+  h1,
+  h2 {
+    color: $white;
+  }
+}
